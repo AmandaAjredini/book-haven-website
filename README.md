@@ -27,6 +27,6 @@ This project was created using XAMMP 8.2.12-0
 
 Download this repository into XAMMP/htdocs
 
-Run XAMMP and start MySQL Database and Apache Web Server services
+Run XAMMP and start MySQL Database and Apache Web Server
 
 On web browser go to address http://localhost/CA/index.php
