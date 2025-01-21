@@ -18,7 +18,7 @@ Reserve a book – The system allows a user to reserve a book provided that no-o
 
 View reserved books – the system allows the user to see a list of the book(s) currently reserved by that user. User should be able to remove the reservation as well
 
-Only 5 results per page when displaying search results or reservation results (pagination).
+Maximum 5 results per page when displaying search results or reservation results (pagination).
 
 CSS is used to make the web pages look more presentable and user-friendly.
 
