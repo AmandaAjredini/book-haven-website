@@ -43,7 +43,7 @@
                             $row = mysqli_fetch_assoc($user_result);
                             
                             // Check if password entered matches stored password for that username
-                            if ($row['password'] === $password) 
+                            if ($row['Password'] === $password) 
                             {
                                 // If password matches, login successful
                                 $_SESSION["username"] = $username;
