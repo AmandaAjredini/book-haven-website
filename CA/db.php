@@ -1,9 +1,9 @@
 <?php
     // Create variables to store server name, username, password and database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "library";
+    $servername = getenv('MYSQL_HOST') ?: 'localhost';
+    $username = getenv('MYSQL_USER') ?: 'root';
+    $password = getenv('MYSQL_PASSWORD') ?: '';
+    $dbname = getenv('MYSQL_DATABASE') ?: 'library';
 
     // Create connection using above variables
 	$conn = new mysqli($servername, $username, $password, $dbname);
