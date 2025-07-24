@@ -61,13 +61,13 @@
 
         
         // Reserve the book by inserting into Reservations table
-        $insert_query = "INSERT INTO Reservations (ISBN, Username) VALUES ('$book_isbn', '$username')";
+        $insert_query = "INSERT INTO reservations (ISBN, Username) VALUES ('$book_isbn', '$username')";
 
         // If SQL query successful, update status of book
         if (mysqli_query($conn, $insert_query)) 
         {
             // Update the 'Reserved' status in Books table
-            $update_book = "UPDATE Books SET Reserved = 'Y' WHERE ISBN = '$book_isbn'";
+            $update_book = "UPDATE books SET Reserved = 'Y' WHERE ISBN = '$book_isbn'";
             mysqli_query($conn, $update_book);
             // Display success message
             $_SESSION['success'] = "Book reserved successfully!";
