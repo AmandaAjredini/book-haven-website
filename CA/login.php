@@ -32,13 +32,13 @@
                     if ($username != "" && $password != "") 
                     {
                         // Check if username exists
-                        $user_check = "SELECT Username FROM Users WHERE Username='$username'";
+                        $user_check = "SELECT Username FROM users WHERE Username='$username'";
                         $result_user_check = mysqli_query($conn, $user_check);
 
                         if (mysqli_num_rows($result_user_check) > 0) 
                         {
                             // If username exists, verify password
-                            $user_sql = "SELECT Password FROM Users WHERE Username='$username'";
+                            $user_sql = "SELECT Password FROM users WHERE Username='$username'";
                             $user_result = mysqli_query($conn, $user_sql);
                             $row = mysqli_fetch_assoc($user_result);
                             
