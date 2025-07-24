@@ -61,7 +61,7 @@
                         $mobile = mysqli_real_escape_string($conn, $_POST['mobile']);
 
                         // Check if username already exists
-                        $username_sql = "SELECT * FROM Users WHERE Username = '$username'";
+                        $username_sql = "SELECT * FROM users WHERE Username = '$username'";
                         $username_result = mysqli_query($conn, $username_sql);
 
                         if (mysqli_num_rows($username_result) > 0) 
@@ -117,8 +117,8 @@
                     if (empty($errors)) 
                     {
                         // If no errors found, proceed to insert data into database
-                        $info_insert_sql = "INSERT INTO Users 
-                                (Username, Password, Firstname, Surname, Addressline1, Addressline2, City, Telephone, Mobile) 
+                        $info_insert_sql = "INSERT INTO users 
+                                (Username, Password, Firstname, Surname, AddressLine1, AddressLine2, City, Telephone, Mobile) 
                                 VALUES ('$username', '$password', '$name', '$surname', '$address1', '$address2', '$city', '$telephone', '$mobile')";
 
                         if (mysqli_query($conn, $info_insert_sql)) 
